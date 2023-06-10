@@ -7,9 +7,9 @@ import { Provider } from "react-redux";
 import logger from "redux-logger";
 
 // Items in the cart
-const feedback = (state = [], action) => {
+const feedback = (state = {}, action) => {
   if (action.type === "ADD_TO_FEEDBACK") {
-    return [...state, action.payload];
+    return {...state, [action.payload.property]: action.payload.value};
   }
 
   return state;
