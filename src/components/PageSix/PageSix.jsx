@@ -5,10 +5,13 @@ function PageSix() {
   const dispatch = useDispatch();
   const history = useHistory();
 
+  //dispatch action triggered by 'Return Home' button click directs the store to reset its state to an empty object
   function handleReset() {
     dispatch({
       type: "RESET_FEEDBACK",
     });
+
+    //User is directed back to the home page
     history.push("/");
   }
 

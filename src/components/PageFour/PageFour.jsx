@@ -1,8 +1,8 @@
-//Note to grader: see code in Page One component file for more specific comments, since this code is functionally the same
-
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+
+//Note to grader: see code in Page One component file for more specific comments, since this code is functionally the same
 
 function PageFour() {
   const dispatch = useDispatch();

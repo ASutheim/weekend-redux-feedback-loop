@@ -5,10 +5,12 @@ import { useHistory } from "react-router-dom";
 function PageFive() {
   const history = useHistory();
 
+  //UseSelector hook saves the store's current state to the variable allFeedback
   const allFeedback = useSelector((store) => store.feedback);
 
   console.log("Feedback:", allFeedback);
 
+  //POST request triggered by clicking the submit button
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Feedback to post:", allFeedback);
@@ -17,6 +19,7 @@ function PageFive() {
         allFeedback,
       })
       .then((response) => {
+        //User is routed to a confirmation page
         history.push(`/PageSix`);
       })
       .catch((error) => {
