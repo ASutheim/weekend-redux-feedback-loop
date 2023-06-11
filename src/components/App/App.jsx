@@ -19,12 +19,15 @@ function App() {
         <Route exact path="/">
           <PageOne />
         </Route>
+
         <Route exact path="/PageTwo">
           <PageTwo />
         </Route>
+
         <Route exact path="/PageThree">
           <PageThree />
         </Route>
+        
       </Router>
     </div>
   );

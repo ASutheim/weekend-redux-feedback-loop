@@ -1,9 +1,10 @@
-//Note to grader: see code in Page One component file for more specific comments, since this code is functionally the same
-
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 function PageTwo() {
+  //Note to grader: see code in Page One component file for more specific comments, since this code is functionally the same
+
   const dispatch = useDispatch();
   const history = useHistory();
 
