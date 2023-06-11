@@ -9,9 +9,11 @@ import logger from "redux-logger";
 // Items in the cart
 const feedback = (state = {}, action) => {
   if (action.type === "ADD_TO_FEEDBACK") {
-    return {...state, [action.payload.property]: action.payload.value};
+    return { ...state, [action.payload.property]: action.payload.value };
   }
-
+  if (action.type === "GET_FEEDBACK") {
+    return state;
+  }
   return state;
 };
 

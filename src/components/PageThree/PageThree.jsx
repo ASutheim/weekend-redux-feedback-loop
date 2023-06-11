@@ -27,7 +27,7 @@ function PageThree() {
   return (
     <form onSubmit={(event) => addFeedback(event)}>
       <div>
-        <label htmlFor="understanding">How well are you being supported?</label>
+        <label htmlFor="support">How well are you being supported?</label>
 
         <input
           onChange={handleFeedback}

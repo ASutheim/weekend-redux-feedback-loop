@@ -8,6 +8,7 @@ import PageOne from "../PageOne/PageOne";
 import PageTwo from "../PageTwo/PageTwo";
 import PageThree from "../PageThree/PageThree";
 import PageFour from "../PageFour/PageFour";
+import PageFive from "../PageFive/PageFive";
 
 function App() {
   return (
@@ -31,6 +32,10 @@ function App() {
 
         <Route exact path="/PageFour">
           <PageFour />
+        </Route>
+
+        <Route exact path="/PageFive">
+          <PageFive />
         </Route>
       </Router>
     </div>
