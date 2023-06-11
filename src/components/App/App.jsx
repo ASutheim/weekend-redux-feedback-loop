@@ -6,6 +6,7 @@ import { HashRouter as Router, Route, Link } from "react-router-dom";
 //Components
 import PageOne from "../PageOne/PageOne";
 import PageTwo from "../PageTwo/PageTwo";
+import PageThree from "../PageThree/PageThree";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route exact path="/PageTwo">
           <PageTwo />
+        </Route>
+        <Route exact path="/PageThree">
+          <PageThree />
         </Route>
       </Router>
     </div>

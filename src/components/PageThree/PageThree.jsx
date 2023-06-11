@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
-function PageTwo() {
+function PageThree() {
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -18,21 +18,19 @@ function PageTwo() {
     console.log("Sending feedback to store:", feedback);
     dispatch({
       type: "ADD_TO_FEEDBACK",
-      payload: { property: "understanding", value: feedback },
+      payload: { property: "support", value: feedback },
     });
-    history.push(`/PageThree`);
+    history.push(`/PageFour`);
   };
 
   return (
     <form onSubmit={(event) => addFeedback(event)}>
       <div>
-        <label htmlFor="understanding">
-          How well are you understanding the content?
-        </label>
+        <label htmlFor="understanding">How well are you being supported?</label>
 
         <input
           onChange={handleFeedback}
-          id="feelings"
+          id="support"
           type="number"
           min="1"
           max="5"
@@ -44,4 +42,4 @@ function PageTwo() {
   );
 }
 
-export default PageTwo;
+export default PageThree;
