@@ -1,6 +1,4 @@
-import React, { useState } from "react";
 import axios from "axios";
-import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
@@ -14,9 +12,18 @@ function PageFive() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    axios.post ("/")
-  }
+    console.log("Feedback to post:", allFeedback);
+    axios
+      .post("/feedback", {
+        allFeedback,
+      })
+      .then((response) => {
+        history.push(`/`);
+      })
+      .catch((error) => {
+        console.log("Error in client side of post:", error);
+      });
+  };
 
   return (
     <div>
@@ -35,9 +42,10 @@ function PageFive() {
         Any comments you'd like to add? <b>{allFeedback.comments}</b>
       </p>
 
-      <p><b>Does this all look good to you?</b> 
-      <button>Submit!</button></p>
-     
+      <p>
+        <b>Does this all look good to you?</b>
+        <button onClick={handleSubmit}>Submit!</button>
+      </p>
     </div>
   );
 }
