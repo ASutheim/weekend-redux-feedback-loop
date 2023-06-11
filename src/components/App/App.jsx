@@ -9,6 +9,7 @@ import PageTwo from "../PageTwo/PageTwo";
 import PageThree from "../PageThree/PageThree";
 import PageFour from "../PageFour/PageFour";
 import PageFive from "../PageFive/PageFive";
+import PageSix from "../PageSix/PageSix";
 
 function App() {
   return (
@@ -36,6 +37,10 @@ function App() {
 
         <Route exact path="/PageFive">
           <PageFive />
+        </Route>
+
+        <Route exact path="/PageSix">
+          <PageSix />
         </Route>
       </Router>
     </div>

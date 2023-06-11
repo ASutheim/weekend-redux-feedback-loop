@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 function PageFive() {
@@ -17,7 +17,7 @@ function PageFive() {
         allFeedback,
       })
       .then((response) => {
-        history.push(`/`);
+        history.push(`/PageSix`);
       })
       .catch((error) => {
         console.log("Error in client side of post:", error);

@@ -14,6 +14,9 @@ const feedback = (state = {}, action) => {
   if (action.type === "GET_FEEDBACK") {
     return state;
   }
+  if (action.type === "RESET_FEEDBACK") {
+    return (state = {});
+  }
   return state;
 };
 
