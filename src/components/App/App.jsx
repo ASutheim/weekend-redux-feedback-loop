@@ -7,6 +7,7 @@ import { HashRouter as Router, Route, Link } from "react-router-dom";
 import PageOne from "../PageOne/PageOne";
 import PageTwo from "../PageTwo/PageTwo";
 import PageThree from "../PageThree/PageThree";
+import PageFour from "../PageFour/PageFour";
 
 function App() {
   return (
@@ -27,7 +28,10 @@ function App() {
         <Route exact path="/PageThree">
           <PageThree />
         </Route>
-        
+
+        <Route exact path="/PageFour">
+          <PageFour />
+        </Route>
       </Router>
     </div>
   );
