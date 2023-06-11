@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 
 function PageFive() {
   const history = useHistory();
-  const dispatch = useDispatch();
 
   const allFeedback = useSelector((store) => store.feedback);
 

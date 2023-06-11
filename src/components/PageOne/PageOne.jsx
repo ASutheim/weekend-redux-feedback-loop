@@ -25,7 +25,7 @@ function PageOne() {
     dispatch({
       type: "ADD_TO_FEEDBACK",
       //structuring the payload to add property name of 'feeling' for later retrieval
-      payload: { property: "feeling", value: feedback },
+      payload: { property: "feeling", value:Number(feedback) },
     });
 
     //routes the user to the next page

@@ -4,13 +4,13 @@ const pool = require("../modules/pool");
 
 router.post("/", (req, res) => {
   console.log("Inside server side of post function");
-  const feedback = req.body;
-  const sqlQuery =
-    'INSERT INTO feedback ("feeling", "understanding", "support", "comments") VALUES ($1, $2, $3, $4)';
+  console.log("Feedback to post:", req.body);
+  const feedback = req.body.allFeedback;
+  const sqlQuery = `INSERT INTO feedback ("feeling", "understanding", "support", "comments") VALUES ($1, $2, $3, $4)`;
 
   pool
     .query(sqlQuery, [
-      feedback.feelings,
+      feedback.feeling,
       feedback.understanding,
       feedback.support,
       feedback.comments,
@@ -24,6 +24,5 @@ router.post("/", (req, res) => {
       res.sendStatus(500);
     });
 });
-
 
 module.exports = router;

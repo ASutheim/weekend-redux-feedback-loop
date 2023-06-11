@@ -19,7 +19,7 @@ function PageThree() {
     console.log("Sending feedback to store:", feedback);
     dispatch({
       type: "ADD_TO_FEEDBACK",
-      payload: { property: "support", value: feedback },
+      payload: { property: "support", value: Number(feedback) },
     });
     history.push(`/PageFour`);
   };
